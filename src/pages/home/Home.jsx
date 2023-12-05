@@ -17,14 +17,11 @@ import Event from "./components/Event";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 //
-import { useTranslation } from "react-i18next";
+
 function Home() {
-  const {i18n} = useTranslation()
+ 
   const [preloadClass,setPreloadClass] = useState('')
 
-  useEffect(()=>{
-    i18n.changeLanguage("zh");
-  })
   useEffect(() => {
     const handleLoad = () => {
       // Your code to handle the load event

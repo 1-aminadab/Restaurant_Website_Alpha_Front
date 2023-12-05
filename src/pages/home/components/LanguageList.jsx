@@ -14,7 +14,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function SplitButton() {
     const options = [{title:'English',lang:'en'},{title:'Amaharic',lang:'am'},{title:'French',lang:'fr'},{title:'Chinise',lang:'zh'}];
-    const { i18n } = useTranslation();
+    let { i18n } = useTranslation();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const [selectedIndex, setSelectedIndex] = React.useState(1);

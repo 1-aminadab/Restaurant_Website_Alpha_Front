@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logoSvg from '../assets/images/logo.svg';
-
+import { GrLanguage } from "react-icons/gr";
+import LanguageList from './LanguageList'
 const Header = () => {
   const [scrollY, setScrollY] = useState(0)
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset)
@@ -14,6 +15,7 @@ const Header = () => {
 useEffect(()=>{
   const handleScroll = ()=>{
     const currentScrollPos = window.scrollY
+    setScrollY(currentScrollPos)
     const isScrollingDown = prevScrollPos < currentScrollPos
     setHeaderVisible(!isScrollingDown)
     setActiveHeader(window.scrollY > 100)
@@ -27,14 +29,14 @@ useEffect(()=>{
 
 console.log(prevScrollPos);
   return (
-    <header className={`header   ${!headerVisible ? 'hide' : ''}`} data-header>
+    <header className={`header   ${!headerVisible ?  'hide'  : ''}`} data-header>
       <h6>{scroll}</h6>
       <div className="container">
         <a href="#" className="logo">
           <img src={logoSvg} width="160" height="50" alt="melala - Home" />
         </a>
 
-        <nav className={`navbar  ${sidebar && "active"}`} data-navbar>
+        <nav className={`navbar   ${sidebar && "active"}`} data-navbar>
           <button onClick={()=>setSidebar(false)} className="close-btn" aria-label="close menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
@@ -97,7 +99,10 @@ console.log(prevScrollPos);
             </a>
           </div>
         </nav>
-
+         <div>
+        
+         <LanguageList />
+         </div>
         <a href="#" className="btn btn-secondary">
           <span className="text text-1">Find A Table</span>
           <span className="text text-2" aria-hidden="true">

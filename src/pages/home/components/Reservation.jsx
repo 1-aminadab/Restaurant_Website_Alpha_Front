@@ -8,7 +8,7 @@ const ReservationSection = () => {
           <form action="" className="form-left">
             <h2 className="headline-1 text-center">Online Reservation</h2>
             <p className="form-text text-center">
-              Booking request <a href="tel:+88123123456" className="link">+88-123-123456</a> or fill out the order form
+              Booking request <a href="tel:+88123123456" className="link">+251946450835</a> or fill out the order form
             </p>
             <div className="input-wrapper">
               <input type="text" name="name" placeholder="Your Name" autoComplete="off" className="input-field" />

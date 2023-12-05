@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import heroSlider1 from '../assets/images/hero-slider-1.jpg';
-import heroSlider2 from '../assets/images/hero-slider-2.jpg';
-import heroSlider3 from '../assets/images/hero-slider-3.jpg';
+import heroSlider1 from '../assets/images/hero-slider-4.jpg';
+import heroSlider2 from '../assets/images/hero-slider-5.jpg';
+import heroSlider3 from '../assets/images/hero-slider-6.jpg';
 import heroIcon from '../assets/images/hero-icon.png';
 
 const sliders = [

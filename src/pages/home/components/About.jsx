@@ -13,9 +13,7 @@ const AboutSection = () => {
           <p className="label-2 section-subtitle" id="about-label">Our Story</p>
           <h2 className="headline-1 section-title">Every Flavor Tells a Story</h2>
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book. It has survived not only five centuries, but also the leap into.
+          Indulge your senses in the rich tapestry of culinary delights, where each taste unfolds a unique narrative. Immerse yourself in the world of gastronomic wonders, where every ingredient is a character and every dish is a chapter waiting to be savored. 
           </p>
           <div className="contact-label">Book Through Call</div>
           <a href="tel:+804001234567" className="body-1 contact-number hover-underline">+251 946450835</a>

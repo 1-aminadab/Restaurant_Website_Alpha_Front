@@ -17,8 +17,8 @@ const SpecialDishSection = () => {
           <p className="section-subtitle label-2">Special Dish</p>
           <h2 className="headline-1 section-title">Lobster Tortellini</h2>
           <p className="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's
-            standard dummy text ever since the when an unknown printer took a galley of type.
+           
+Indulge in the culinary masterpiece of our signature Lobster Tortellini. Crafted with precision, each bite is a revelation of handcrafted pasta and succulent lobster essence, elevating your dining experience beyond the ordinary.
           </p>
           <div className="wrapper">
             <del className="del body-3">$40.00</del>

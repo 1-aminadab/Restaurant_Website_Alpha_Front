@@ -13,7 +13,7 @@ import { useTranslation } from 'react-i18next';
 // const options = ['Create a merge commit', 'Squash and merge', 'Rebase and merge'];
 
 export default function SplitButton() {
-    const options = [{title:'English',lang:'en'},{title:'Amaharic',lang:'am'},{title:'French',lang:'fr'},{title:'Chinise',lang:'zh'}];
+    const options = [{title:'English',lang:'en'},{title:'Amaharic',lang:'am'},{title:'French',lang:'fr'},{title:'Chinise',lang:'zh'},{title:'Arabic',lang:'ar'},{title:'Hindi',lang:'hi'}];
     let { i18n } = useTranslation();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -53,7 +53,7 @@ export default function SplitButton() {
           aria-label="select merge strategy"
           aria-haspopup="menu"
           onClick={handleToggle}
-          sx={{backgroundColor:"white"}}
+          sx={{backgroundColor:"#fff9",hover:{backgroundColor:'white'}}}
         
         >
           <GrLanguage style={{fontSize:"20px", color:"black"}}/>

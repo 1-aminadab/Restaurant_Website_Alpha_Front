@@ -8,7 +8,8 @@ import Preload from "./pages/home/components/Preload.jsx";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-    <Suspense fallback={<Preload/>}>
+    <Suspense fallback={<div className="preload"><div className="circle"></div>
+    <p className="text">melala</p></div>}>
       <App />
     </Suspense>
       

@@ -64,7 +64,7 @@ const HeroSection = () => {
   useEffect(() => {
    setTimeout(() => {
     nextSlide()
-   }, 7000);
+   }, 5000);
   },[nextSlide]); // Empty dependency array means it runs only on mount and unmount
    
   return (

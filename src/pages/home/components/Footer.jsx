@@ -4,6 +4,7 @@ import footerBgImage from '../assets/images/footer-bg.jpg';
 import logoImage from '../assets/images/logo.svg';
 
 const Footer = () => {
+  const copyRightYear = new Date().getFullYear()
   return (
     <footer className="footer section has-bg-image text-center" style={{ backgroundImage: `url(${footerBgImage})` }}>
       <div className="container">
@@ -51,7 +52,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; 2022 melala. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee" target="_blank" className="link">codewithsadee</a>
+            &copy; {copyRightYear} melala. All Rights Reserved | Crafted by <a href="https://portfol-ui.onrender.com" target="_blank" className="link">Aminadab</a>
           </p>
         </div>
       </div>

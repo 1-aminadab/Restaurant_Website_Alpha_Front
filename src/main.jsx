@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
     <Suspense fallback={<div className="preload"><div className="circle"></div>
-    <p className="text">melala</p></div>}>
+    <p className="text">Sole</p></div>}>
       <App />
     </Suspense>
       

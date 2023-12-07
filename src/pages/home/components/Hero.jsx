@@ -42,7 +42,7 @@ const HeroSection = () => {
 
    const nextSlide = ()=>{
     
-    if(currentIndex <= sliders.length-1 ) return setIndex(currentIndex++)
+    if(currentIndex <= sliders.length ) return setIndex(currentIndex++)
     else return setIndex(0)
    }
    const prevSlide = ()=>{
@@ -58,12 +58,15 @@ const HeroSection = () => {
   const handleMouseOut = () => {
     autoSlide();
   };
-
   useEffect(() => {
-   setTimeout(() => {
-    nextSlide()
-   }, 5000);
-  },[nextSlide]); // Empty dependency array means it runs only on mount and unmount
+    const timeoutID= window.setInterval(() => {
+      nextSlide()
+    },  4000);
+
+    // Clear Timeout On Component Unmount
+    return () => window.clearTimeout(timeoutID);
+  }, []);
+ 
    
   return (
     <section className="hero text-center" aria-label="home" id="home">
@@ -97,7 +100,7 @@ const HeroSection = () => {
       <button onClick={()=>nextSlide()}   className="slider-btn prev" aria-label="slide to previous" data-prev-btn onMouseOut={handleMouseOut}>
         <ion-icon name="chevron-back"></ion-icon>
       </button>
-      <button  onClick={()=>prevSlide()}  className="slider-btn next" aria-label="slide to next" data-next-btn onClick={prevSlide}>
+      <button  onClick={()=>prevSlide()}  className="slider-btn next" aria-label="slide to next" data-next-btn >
         <ion-icon name="chevron-forward"></ion-icon>
       </button>
       <a href="#" className="hero-btn has-after">

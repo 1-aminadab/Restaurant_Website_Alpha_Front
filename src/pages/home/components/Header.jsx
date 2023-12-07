@@ -4,10 +4,10 @@ import { GrLanguage } from "react-icons/gr";
 import { FindTable } from '../../../components/common/Texts';
 import LanguageList from './LanguageList'
 const Header = () => {
-  const [scrollY, setScrollY] = useState(0)
+
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset)
   const [headerVisible, setHeaderVisible] = useState(true)
-  const [activeHeader, setActiveHeader] = useState(false)
+
 
 
 
@@ -16,10 +16,10 @@ const Header = () => {
 useEffect(()=>{
   const handleScroll = ()=>{
     const currentScrollPos = window.scrollY
-    setScrollY(currentScrollPos)
     const isScrollingDown = prevScrollPos < currentScrollPos
     setHeaderVisible(!isScrollingDown)
-    setActiveHeader(window.scrollY > 100)
+    setPrevScrollPos(currentScrollPos)
+
     
   }
   window.addEventListener('scroll',handleScroll)
@@ -33,7 +33,7 @@ console.log(prevScrollPos);
     <header className={`header   ${!headerVisible ?  'hide'  : ''}`} data-header>
       <h6>{scroll}</h6>
       <div className="container">
-        <a href="#" className="logo">
+        <a href="#top" className="logo">
           <img src={logoSvg} width="160" height="50" alt="sole - Home" />
         </a>
 
@@ -48,7 +48,7 @@ console.log(prevScrollPos);
 
           <ul className="navbar-list">
             <li className="navbar-item">
-              <a href="#home" className="navbar-link hover-underline active">
+              <a href="#top" className="navbar-link hover-underline active">
                 <div className="separator"></div>
                 <span className="span">Home</span>
               </a>
@@ -76,9 +76,9 @@ console.log(prevScrollPos);
             </li>
 
             <li className="navbar-item">
-              <a href="#" className="navbar-link hover-underline">
+              <a href="/contact" className="navbar-link hover-underline">
                 <div className="separator"></div>
-                <span className="span">Contact</span>
+                <span  className="span">Contact</span>
               </a>
             </li>
           </ul>

@@ -42,7 +42,7 @@ const HeroSection = () => {
 
    const nextSlide = ()=>{
     
-    if(currentIndex <= sliders.length ) return setIndex(currentIndex++)
+    if(currentIndex <= sliders.length-1 ) return setIndex(currentIndex++)
     else return setIndex(0)
    }
    const prevSlide = ()=>{

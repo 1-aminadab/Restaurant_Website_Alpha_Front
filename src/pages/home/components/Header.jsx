@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logoSvg from '../assets/images/logo.svg';
 import { GrLanguage } from "react-icons/gr";
+import { FindTable } from '../../../components/common/Texts';
 import LanguageList from './LanguageList'
 const Header = () => {
   const [scrollY, setScrollY] = useState(0)
@@ -104,9 +105,9 @@ console.log(prevScrollPos);
          <LanguageList />
          </div>
         <a href="#" className="btn btn-secondary">
-          <span className="text text-1">Find A Table</span>
+          <span className="text text-1"><FindTable /></span>
           <span className="text text-2" aria-hidden="true">
-            Find A Table
+           <FindTable />
           </span>
         </a>
 

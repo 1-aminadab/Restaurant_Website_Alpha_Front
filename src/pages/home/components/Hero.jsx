@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { ViewMenu } from '../../../components/common/Texts';
 import heroSlider1 from '../assets/images/hero-slider-4.jpg';
 import heroSlider2 from '../assets/images/hero-slider-5.jpg';
 import heroSlider3 from '../assets/images/hero-slider-6.jpg';
 import heroIcon from '../assets/images/hero-icon.png';
-
+import { useTranslation } from 'react-i18next'; 
+import { FindTable } from '../../../components/common/Texts';
 const sliders = [
   {
     image:heroSlider1,
     subtitle:"Traditional & Hygiene",
-    title1:"For the love of",
+    title1:"hero.title-1",
     title2:"delicious food",
     text:"Come with family & feel the joy of mouthwatering food",
     btnTxt:"View Our Menu",
@@ -17,7 +19,7 @@ const sliders = [
   {
     image:heroSlider2,
     subtitle:"Delightful Experience",
-    title1:"Flavors Inspired by",
+    title1:"hero.title-2",
     title2:"the Seasons",
     text:"Come with family & feel the joy of mouthwatering food",
     btnTxt:"View Our Menu",
@@ -26,7 +28,7 @@ const sliders = [
   {
     image:heroSlider3,
     subtitle:"Amazing & Delicious",
-    title1:"Where every flavor",
+    title1:"hero.title-3",
     title2:"tells a story",
     text:"Come with family & feel the joy of mouthwatering food",
     btnTxt:"View Our Menu",
@@ -34,6 +36,7 @@ const sliders = [
   },
 ]
 const HeroSection = () => {
+  const {t} = useTranslation()
   const [autoSlideInterval, setAutoSlideInterval] = useState(null);
   let [currentIndex, setIndex] = useState(0)
 
@@ -52,11 +55,6 @@ const HeroSection = () => {
   const autoSlide = () => {
     setAutoSlideInterval(setInterval(slideNext, 10000));
   };
-
-  const handleMouseOver = () => {
-    clearInterval(autoSlideInterval);
-  };
-
   const handleMouseOut = () => {
     autoSlide();
   };
@@ -77,15 +75,16 @@ const HeroSection = () => {
             <div className="slider-bg">
               <img src={slide.image} width="1880" height="950" alt="" className="img-cover" />
             </div>
-            <p className="label-2 section-subtitle slider-reveal">Traditional & Hygiene</p>
+            <p className="label-2 section-subtitle slider-reveal">{t('hero.common-1')}</p>
             <h1 className="display-1 hero-title slider-reveal">
-              {slide.title1} <br /> {slide.title2}
+            {t(slide.title1)}
             </h1>
-            <p className="body-2 hero-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
+            <p className="body-2 hero-text slider-reveal">{t('hero.subTitle-1')}</p>
             <a href="#" className="btn btn-primary slider-reveal">
-              <span className="text text-1">{slide.btnTxt}</span>
+              <span className="text text-1"><ViewMenu /></span>
               <span className="text text-2" aria-hidden="true">
-                {slide.btnTxt}
+                <ViewMenu />
+               
               </span>
             </a>
           </li>
@@ -103,7 +102,7 @@ const HeroSection = () => {
       </button>
       <a href="#" className="hero-btn has-after">
         <img src={heroIcon} width="48" height="48" alt="booking icon" />
-        <span className="label-2 text-center span">Book A Table</span>
+        <span className="label-2 text-center span"><FindTable /></span>
       </a>
     
     </section>

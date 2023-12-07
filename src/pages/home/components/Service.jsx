@@ -1,12 +1,12 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 import serviceImage1 from '../assets/images/service-1.jpg';
 import serviceImage2 from '../assets/images/service-2.jpg';
 import serviceImage3 from '../assets/images/service-3.jpg';
 import shape1 from '../assets/images/shape-1.png';
 import shape2 from '../assets/images/shape-2.png';
-import { useTranslation } from 'react-i18next';
 
+import { ViewMenu } from '../../../components/common/Texts';
 const ServicesSection = () => {
   const {t} = useTranslation()
   return (
@@ -27,10 +27,10 @@ const ServicesSection = () => {
               </a>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Breakfast</a>
+                  <a href="#">{t('service.listTitle-1')}</a>
                 </h3>
                 <a href="#" className="btn-text hover-underline label-2">
-                  View Menu
+                <ViewMenu />
                 </a>
               </div>
             </div>
@@ -44,10 +44,10 @@ const ServicesSection = () => {
               </a>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Appetizers</a>
+                  <a href="#">{t('service.listTitle-2')}</a>
                 </h3>
                 <a href="#" className="btn-text hover-underline label-2">
-                  View Menu
+                <ViewMenu />
                 </a>
               </div>
             </div>
@@ -61,10 +61,10 @@ const ServicesSection = () => {
               </a>
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Drinks</a>
+                  <a href="#">{t('service.listTitle-3')}</a>
                 </h3>
                 <a href="#" className="btn-text hover-underline label-2">
-                  View Menu
+                <ViewMenu />
                 </a>
               </div>
             </div>

@@ -33,7 +33,7 @@ console.log(prevScrollPos);
       <h6>{scroll}</h6>
       <div className="container">
         <a href="#" className="logo">
-          <img src={logoSvg} width="160" height="50" alt="melala - Home" />
+          <img src={logoSvg} width="160" height="50" alt="sole - Home" />
         </a>
 
         <nav className={`navbar   ${sidebar && "active"}`} data-navbar>
@@ -42,7 +42,7 @@ console.log(prevScrollPos);
           </button>
 
           <a href="#" className="logo">
-            <img src={logoSvg} width="160" height="50" alt="melala - Home" />
+            <img src={logoSvg} width="160" height="50" alt="sole - Home" />
           </a>
 
           <ul className="navbar-list">
@@ -89,8 +89,8 @@ console.log(prevScrollPos);
               London 9578, UK
             </address>
             <p className="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-            <a href="mailto:booking@melala.com" className="body-4 sidebar-link">
-              booking@melala.com
+            <a href="mailto:booking@sole.com" className="body-4 sidebar-link">
+              booking@sole.com
             </a>
             <div className="separator"></div>
             <p className="contact-label">Booking Request</p>

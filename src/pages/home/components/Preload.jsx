@@ -21,7 +21,7 @@ function Preload() {
   return (
     <div style={{display:`${preloadClass === "loaded" && "none"}`}} className={`preload ${preloadClass}`} data-preaload>
     <div className="circle"></div>
-    <p className="text">melala</p>
+    <p className="text">sole</p>
   </div>
   )
 }

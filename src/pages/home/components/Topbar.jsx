@@ -29,11 +29,11 @@ const Topbar = () => {
 
         <div className="separator"></div>
 
-        <a href="mailto:melala@gmail.com" className="topbar-item link">
+        <a href="mailto:sole@gmail.com" className="topbar-item link">
           <div className="icon">
             <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
           </div>
-          <span className="span">melala@gmail.com</span>
+          <span className="span">sole@gmail.com</span>
         </a>
       </div>
     </div>

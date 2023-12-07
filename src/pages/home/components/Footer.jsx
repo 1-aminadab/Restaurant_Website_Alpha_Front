@@ -11,10 +11,10 @@ const Footer = () => {
         <div className="footer-top grid-list">
           <div className="footer-brand has-before has-after">
             <a href="#" className="logo">
-              <img src={logoImage} width="160" height="50" loading="lazy" alt="melala home" />
+              <img src={logoImage} width="160" height="50" loading="lazy" alt="sole home" />
             </a>
             <address className="body-4">Ayat Real Estate, Wesen, Addis Ababa, Ethiopia</address>
-            <a href="mailto:booking@melala.com" className="body-4 contact-link">melala@gmail.com</a>
+            <a href="mailto:booking@sole.com" className="body-4 contact-link">sole@gmail.com</a>
             <a href="tel:+88123123456" className="body-4 contact-link">Booking Request : +88-123-123456</a>
             <p className="body-4">Open : 09:00 am - 01:00 pm</p>
             <div className="wrapper">
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
         <div className="footer-bottom">
           <p className="copyright">
-            &copy; {copyRightYear} melala. All Rights Reserved | Crafted by <a href="https://portfol-ui.onrender.com" target="_blank" className="link">Aminadab</a>
+            &copy; {copyRightYear} sole. All Rights Reserved | Crafted by <a href="https://portfol-ui.onrender.com" target="_blank" className="link">Aminadab</a>
           </p>
         </div>
       </div>

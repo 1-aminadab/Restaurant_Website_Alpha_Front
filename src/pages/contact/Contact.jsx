@@ -1,94 +1,35 @@
-import React, { useState } from 'react';
-import './Contact.css'; // Import your CSS file for styling
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faFacebook,
-  faTwitter,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your logic to send the form data (formData) here
-    console.log('Form Data Submitted:', formData);
-  };
-
+const ReservationSection = () => {
   return (
-    <div className="contact-container">
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+    <section className="" style={{display:"flex",height:"fit-content", alignItems:"center",padding:"250px 0px"}}>
+      <div className="container">
+        <div className="form reservation-form bg-black-10">
+          <form action="" className="form-left">
+            <h2 className="headline-1 text-center">Contact Us</h2>
+            <p className="form-text text-center">
+              Booking request <a href="tel:+88123123456" className="link">+251946450835</a> or fill out the order form
+            </p>
+            <div className="input-wrapper">
+              <input type="text" name="name" placeholder="Your Name" autoComplete="off" className="input-field" />
+              <input type="tel" name="phone" placeholder="Phone Number" autoComplete="off" className="input-field" />
+              <input type="email" name="email" placeholder="Email" autoComplete="off" className="input-field" />
+            </div>
+            <div className="input-wrapper">
+          
+                 <textarea name="text" id="" placeholder='Message' cols="30" rows="10" className="input-field"></textarea>
+             
+            </div>
+            {/* Add additional form fields as needed */}
+            <button type="submit" className="btn btn-primary">
+              <span className="text text-1">Submit</span>
+              <span className="text text-2" aria-hidden="true">Submit</span>
+            </button>
+          </form>
         </div>
-        <div className="form-group">
-          <label htmlFor="phone">Phone:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Send</button>
-      </form>
-
-      {/* Social Media Icons */}
-      <div className="social-icons">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faFacebook} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faTwitter} />
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Contact;
+export default ReservationSection;

@@ -1,15 +1,14 @@
 import React from "react";
 
-import menuImage1 from "../assets/images/menu-1.png";
-import menuImage2 from "../assets/images/menu-2.png";
-import menuImage3 from "../assets/images/menu-3.png";
-import menuImage4 from "../assets/images/menu-4.png";
-import menuImage5 from "../assets/images/menu-5.png";
-import menuImage6 from "../assets/images/menu-6.png";
-import shape5 from "../assets/images/shape-5.png";
-import shape6 from "../assets/images/shape-6.png";
-// 
-import {useNavigate} from 'react-router-dom'
+import menuImage1 from "../home/assets/images/menu-1.png";
+import menuImage2 from "../home/assets/images/menu-2.png";
+import menuImage3 from "../home/assets/images/menu-3.png";
+import menuImage4 from "../home/assets/images/menu-4.png";
+import menuImage5 from "../home/assets/images/menu-5.png";
+import menuImage6 from "../home/assets/images/menu-6.png";
+import shape5 from "../home/assets/images/shape-5.png";
+import shape6 from "../home/assets/images/shape-6.png";
+
 const menus = [
   {
     name: "Gas Light",
@@ -61,7 +60,6 @@ const menus = [
   },
 ];
 const MenuSection = () => {
-  const navigate = useNavigate()
   return (
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
@@ -110,7 +108,7 @@ const MenuSection = () => {
           During winter daily from <span className="span">7:00 pm</span> to{" "}
           <span className="span">9:00 pm</span>
         </p>
-        <a onClick={()=>navigate('/menu')} className="btn btn-primary">
+        <a href="#" className="btn btn-primary">
           <span className="text text-1">View All Menu</span>
           <span className="text text-2" aria-hidden="true">
             View All Menu
